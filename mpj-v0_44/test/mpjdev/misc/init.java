@@ -1,5 +1,9 @@
 import mpjdev.*;
 import mpjbuf.*;
+import xdev.Device;
+import xdev.ProcessID;
+import xdev.niodev.NIODevice;
+
 import java.util.Arrays;
 
 public class init {
