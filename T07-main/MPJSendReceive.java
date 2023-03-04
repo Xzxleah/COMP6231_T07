@@ -32,14 +32,13 @@ public class MPJSendReceive{
 
 		else if(rank == 0){
 			dst = 1;
-			int sum = 0, num = 0;
 			int buffer_snt[] = new int [1];
 			int buffer_rcv[] = new int [2];
 			MPI.COMM_WORLD.Recv(buffer_rcv, 0, 2, MPI.INT, dst, tag);
 			System.out.println("My ID is <" + rank +"> received # " + buffer_rcv[0]);
 			//System.out.println("My ID is <" + rank +"> received # " + buffer_rcv[1]);
 			//TODO implement addition of given integers
-			sum = buffer_rcv[0] + buffer_rcv[1];
+			int sum = buffer_rcv[0] + buffer_rcv[1];
 
 			//TODO implement Send of the sum.
 			buffer_snt[0] = sum;
